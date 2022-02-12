@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { SignInButton } from '../SignInButton';
 import styles from './styles.module.scss';
 
 const Header = () => {
@@ -10,6 +11,8 @@ const Header = () => {
           <a className={styles.active}>Home</a>
           <a>Posts</a>
         </nav>
+
+        <SignInButton />
       </div>
     </header>
   )
