@@ -13,9 +13,7 @@ IG.NEWS - É um projeto desenvolvido no curso frontend da Rocketseat na trilha i
 ### Web
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="Flix" title="#Flix" src="" width="400px">
-
-  <img alt="Flix" title="#Flix" src="" width="400px">
+  <img alt="Flix" title="#Flix" src="https://raw.githubusercontent.com/jeandsontb/IG-News/main/screen/ignews.png" width="400px">
 </p>
 
 ## 🛠 Tecnologias
