@@ -1,0 +1,7 @@
+Comandos para utilizar o stripe
+
+esse para fazer o login
+./stripe login
+
+esse para fazer o pagamento e ficar acompanhando o processo
+./stripe listen --forward-to localhost:3000/api/webhooks
