@@ -2,6 +2,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Prismic from '@prismicio/client';
 import { RichText } from 'prismic-dom';
+import Link from 'next/link';
 import { getPrismicClient } from '../../services/prismic';
 import styles from './styles.module.scss';
 
@@ -23,14 +24,18 @@ const Posts = ({ posts }: PostsProps) => {
         <title>Posts | Ig News</title>
       </Head>
 
+      {console.log(JSON.stringify(posts, null, 2))}
+
       <main className={styles.container}>
         <div className={styles.postlist}>
           {posts.map(post => (
-            <a key={post.slug} href='#'>
-              <time>{post.updatedAt}</time>
-              <strong>{post.title}</strong>
-              <p>{post.excerpt}</p>
-            </a>
+            <Link key={post.slug} href={`/posts/${post.slug}`}>
+              <a>
+                <time>{post.updatedAt}</time>
+                <strong>{post.title}</strong>
+                <p>{post.excerpt}</p>
+              </a>
+            </Link>
           )) }
         </div>
       </main>
@@ -61,7 +66,7 @@ export const getStaticProps: GetStaticProps = async () => {
         year: 'numeric'
       })
     }
-  })
+  });
 
   return {
     props: {
