@@ -24,7 +24,7 @@ const Posts = ({ posts }: PostsProps) => {
         <title>Posts | Ig News</title>
       </Head>
 
-      {console.log(JSON.stringify(posts, null, 2))}
+      {/* {console.log(JSON.stringify(posts, null, 2))} */}
 
       <main className={styles.container}>
         <div className={styles.postlist}>
